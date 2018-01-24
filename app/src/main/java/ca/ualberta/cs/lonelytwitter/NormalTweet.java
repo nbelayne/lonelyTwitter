@@ -1,10 +1,9 @@
 package ca.ualberta.cs.lonelytwitter;
 
-import java.util.Date;
-
 /**
- * Created by nbelayne on 1/16/18.
+ * Created by dezfuli on 1/16/18.
  */
+import java.util.Date;
 
 public class NormalTweet extends Tweet {
     NormalTweet(String message){
@@ -16,7 +15,7 @@ public class NormalTweet extends Tweet {
     }
 
     @Override
-    public Boolean isImportant(){
+    public Boolean isImportant() {
         return Boolean.FALSE;
     }
 }
