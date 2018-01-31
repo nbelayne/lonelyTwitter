@@ -26,6 +26,13 @@ import android.widget.Toast;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
+/**
+ * Represents a LonelyTwitter Activity
+ *
+ *  @author nbelayne
+ * @version 1.5
+ * @see Activity
+ */
 public class LonelyTwitterActivity extends Activity {
 
 	private static final String FILENAME = "tweets.sav";
@@ -34,8 +41,10 @@ public class LonelyTwitterActivity extends Activity {
 
 	private ArrayList<Tweet> tweetList;
 	private ArrayAdapter<Tweet> adapter;
-	
-	/** Called when the activity is first created. */
+
+	/**
+	 * Called when the activity is first created.
+	 */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -76,6 +85,9 @@ public class LonelyTwitterActivity extends Activity {
 		});
 	}
 
+	/**
+	 * Start creating list of tweets
+	 */
 	@Override
 	protected void onStart() {
 
@@ -91,6 +103,9 @@ public class LonelyTwitterActivity extends Activity {
 
 	}
 
+	/**
+	 * Load tweet from list
+	 */
 	private void loadFromFile() {
 
 		try {
@@ -111,7 +126,10 @@ public class LonelyTwitterActivity extends Activity {
 		}
 
 	}
-	
+
+	/**
+	 * Saves tweet in list
+	 */
 	private void saveInFile() {
 		try {
 
@@ -132,6 +150,9 @@ public class LonelyTwitterActivity extends Activity {
 		}
 	}
 
+	/**
+	 * Destroys everything after a tweet is deleted
+	 */
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
