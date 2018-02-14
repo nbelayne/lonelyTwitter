@@ -1,5 +1,7 @@
 package ca.ualberta.cs.lonelytwitter;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
 import io.searchbox.annotations.JestId;
 
@@ -53,4 +55,5 @@ public abstract class Tweet implements Tweetable {
     public Date getDate() {
         return date;
     }
+
 }
